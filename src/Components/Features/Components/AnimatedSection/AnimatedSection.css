@@ -1,0 +1,13 @@
+.animated-section {
+  transition: all 0.7s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(2.5rem);
+}
