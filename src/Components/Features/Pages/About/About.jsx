@@ -33,14 +33,18 @@ const About = () => {
                         <AnimatedSection delay="300ms">
                             <h3 className="about-subheading">Mon parcours</h3>
                             <p>
-                                Après une formation en statistiques et en informatique, j'ai débuté ma carrière en tant que Data Analyst, où j'ai appris à traduire des ensembles de données complexes en stratégies commerciales. Frustré par les limitations des outils existants, je me suis plongé dans le développement d'applications pour construire moi-même les solutions que j'imaginais. Cette double compétence est aujourd'hui au cœur de mon approche.
-                            </p>
+                                Après une formation en Mathématiques et Informatique Appliquée, jai débuté ma carrière par le développement dapplications web,
+                                en particulier sur le frontend. Cette expérience ma donné le goût de construire des
+                                solutions concrètes et intuitives. Je me suis ensuite orienté vers lanalyse de données,
+                                où jai appris à traduire des ensembles complexes en stratégies exploitables. Aujourdhui,
+                                cette double compétence "Développement et Data" est au cœur de mon approche, me permettant à la fois de concevoir des outils sur mesure et
+                                denrichir les décisions stratégiques par la donnée.                            </p>
                         </AnimatedSection>
 
                         <AnimatedSection delay="400ms">
                             <h3 className="about-subheading">Mon rôle de CEO</h3>
                             <p>
-                                En tant que CEO de deux entreprises technologiques, mon rôle va au-delà du code. Je suis responsable de la vision produit, de la stratégie de croissance et de la constitution d'équipes performantes. Cette expérience m'a donné une perspective complète sur le cycle de vie d'un produit, de l'idée initiale à la mise sur le marché et à sa croissance.
+                                En tant que CEO de deux entreprises, mon rôle va au-delà du code. Je suis responsable de la vision produit, de la stratégie de croissance et de la constitution d'équipes performantes. Cette expérience m'a donné une perspective complète sur le cycle de vie d'un produit, de l'idée initiale à la mise sur le marché et à sa croissance.
                             </p>
                         </AnimatedSection>
 
