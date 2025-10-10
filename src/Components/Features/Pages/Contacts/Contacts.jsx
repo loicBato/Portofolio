@@ -17,7 +17,7 @@ const Contact = () => {
       return;
     }
 
-    const whatsappMessage = `Bonjour, je suis ${name} (${email}).\n\n${message}\n\nSource: Site portfolio`;
+    const whatsappMessage = `Bonjour Mr BATO, je suis ${name} (${email}).\n\n${message}\n\nSource: Votre site portfolio`;
     const phoneNumber = "22896701572"; // Replace with your number
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 

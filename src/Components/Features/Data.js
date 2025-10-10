@@ -67,7 +67,7 @@ export const companiesData = [
     logo: lms,
     mission: "Créer et proposer des vêtements modernes et accessibles qui valorisent l’identité africaine et le savoir-faire togolais.",
     description: "Entreprise innovante au Togo qui a lancé sa propre marque de vêtements, alliant créativité, identité culturelle et tendances actuelles pour habiller fièrement la jeunesse et le grand public. Marque de vêtements togolaise qui allie style urbain et inspiration africaine, avec des créations originales, de qualité et adaptées aux tendances actuelles. Elle soutient les artisans locaux et vise à donner une visibilité internationale à la mode togolaise.",
-    websiteUrl: 'https://lms-empire.vercel.app/',
+    websiteUrl: 'https://lmsempire.netlify.app/',
   },
 ];
 
