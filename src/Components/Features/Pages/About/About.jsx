@@ -33,12 +33,12 @@ const About = () => {
                         <AnimatedSection delay="300ms">
                             <h3 className="about-subheading">Mon parcours</h3>
                             <p>
-                                Après une formation en Mathématiques et Informatique Appliquée, jai débuté ma carrière par le développement dapplications web,
-                                en particulier sur le frontend. Cette expérience ma donné le goût de construire des
-                                solutions concrètes et intuitives. Je me suis ensuite orienté vers lanalyse de données,
-                                où jai appris à traduire des ensembles complexes en stratégies exploitables. Aujourdhui,
+                                Après une formation en Mathématiques et Informatique Appliquée, j'ai débuté ma carrière par le développement d'applications web,
+                                en particulier sur le frontend. Cette expérience m'a donné le goût de construire des
+                                solutions concrètes et intuitives. Je me suis ensuite orienté vers l'analyse de données,
+                                où j'ai appris à traduire des ensembles complexes en stratégies exploitables. Aujourd'hui,
                                 cette double compétence "Développement et Data" est au cœur de mon approche, me permettant à la fois de concevoir des outils sur mesure et
-                                denrichir les décisions stratégiques par la donnée.                            </p>
+                                d'enrichir les décisions stratégiques par la donnée.                            </p>
                         </AnimatedSection>
 
                         <AnimatedSection delay="400ms">
