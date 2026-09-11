@@ -1,17 +1,52 @@
 
 // import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+    SiReact,
+    SiPython,
+    SiTableau,
+    SiFastapi,
+    SiJavascript,
+    SiPytorch,
+    SiPostgresql,
+    SiNodedotjs,
+    SiGithub,
+    SiDocker,
+    SiFigma,
+    SiMongodb,
+    SiTensorflow,
+    SiScikitlearn
+} from 'react-icons/si';
 import './Home.css';
 import AnimatedSection from '../../Components/AnimatedSection/AnimatedSection';
 import { CeoIcon, DataIcon, DevIcon } from '../../Icons';
 import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 import { companiesData, projectsData } from '../../Data';
 import CompanyCard from '../../Components/CompanyCard/CompanyCard';
-import ceo from '../../../../assets/ceo.jpg'
+import ceo from '../../../../assets/ceo2.jpg'
 
 
 const Home = () => {
     const featuredProjects = projectsData.slice(0, 3);
+    const techLogos = [
+        { name: 'React', Icon: SiReact },
+        { name: 'Python', Icon: SiPython },
+        { name: 'SQL', Icon: () => <span className="tech-text-icon">SQL</span> },
+        { name: 'Power BI', Icon: () => <span className="tech-text-icon tech-powerbi">PBI</span> },
+        { name: 'Tableau', Icon: SiTableau },
+        { name: 'FastAPI', Icon: SiFastapi },
+        { name: 'JavaScript', Icon: SiJavascript },
+        { name: 'PyTorch', Icon: SiPytorch },
+        { name: 'PostgreSQL', Icon: SiPostgresql },
+        { name: 'Node.js', Icon: SiNodedotjs },
+        { name: 'GitHub', Icon: SiGithub },
+        { name: 'Docker', Icon: SiDocker },
+        { name: 'Figma', Icon: SiFigma },
+        { name: 'Excel', Icon: () => <span className="tech-text-icon tech-excel">XLS</span> },
+        { name: 'MongoDB', Icon: SiMongodb },
+        { name: 'TensorFlow', Icon: SiTensorflow },
+        { name: 'Scikit-learn', Icon: SiScikitlearn }
+    ];
     //   const topSkills = skillsData.flatMap(cat => cat.skills).slice(0, 6);
 
     return (
@@ -36,18 +71,33 @@ const Home = () => {
                                 </span>
                             </div>
                             <h1 className="hero-title">
-                                Loic T. BATO
-
+                                Tarekpessou Loïc BATO
                             </h1>
                             <p className="hero-description">
-                                Développeur d'applications & Data Analyst, CEO de @LMS Empire & @BAT LAB. J'aide les startups à transformer les données en produits.
+                                Data Analyst - Développeur Web - ML - Data Scientist. Je conçois des solutions techniques, analytiques et intelligentes qui transforment les données brutes en valeur exploitable pour les entreprises et les projets innovants.
                             </p>
+
+                            <div className="hero-metrics" aria-label="statistiques de profil">
+                                <div className="hero-metric">
+                                    <span className="hero-metric-value">+5</span>
+                                    <span className="hero-metric-label">ans de terrain</span>
+                                </div>
+                                <div className="hero-metric">
+                                    <span className="hero-metric-value">Master</span>
+                                    <span className="hero-metric-label">IA & Big Data</span>
+                                </div>
+                                <div className="hero-metric">
+                                    <span className="hero-metric-value">Full-stack</span>
+                                    <span className="hero-metric-label">+ Data</span>
+                                </div>
+                            </div>
+
                             <div className="hero-buttons">
                                 <Link to="/projects" className="hero-button-primary">
-                                    Voir mes projets
+                                    Découvrir mes projets
                                 </Link>
                                 <Link to="/contact" className="hero-button-secondary">
-                                    Me contacter
+                                    Travailler avec moi
                                 </Link>
                             </div>
                         </AnimatedSection>
@@ -64,6 +114,69 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <AnimatedSection>
+                <div className="tech-carousel-wrap" aria-label="Technologies maîtrisées">
+                    <div className="tech-carousel-track">
+                        {[...techLogos, ...techLogos].map((tech, index) => {
+                            const Icon = tech.Icon;
+
+                            return (
+                                <span key={`${tech.name}-${index}`} className="tech-badge" title={tech.name}>
+                                    <Icon className="tech-badge-icon" />
+                                    <span>{tech.name}</span>
+                                </span>
+                            );
+                        })}
+                    </div>
+                </div>
+            </AnimatedSection>
+
+            <AnimatedSection>
+                <div className="value-strip">
+                    <div className="value-card">
+                        <span className="value-kicker">01</span>
+                        <h3>Data strategy</h3>
+                        <p>Collecte, contrôle qualité, nettoyage et analyse de données à grande échelle.</p>
+                    </div>
+                    <div className="value-card">
+                        <span className="value-kicker">02</span>
+                        <h3>Produit digital</h3>
+                        <p>Conception d’interfaces et de solutions web orientées utilisateur et performance.</p>
+                    </div>
+                    <div className="value-card">
+                        <span className="value-kicker">03</span>
+                        <h3>IA & modélisation</h3>
+                        <p>Machine Learning et Deep Learning appliqués à des cas concrets et évolutifs.</p>
+                    </div>
+                </div>
+            </AnimatedSection>
+
+            <AnimatedSection>
+                <div className="expertise-panel">
+                    <div className="expertise-copy">
+                        <span className="panel-label">Ce que je apporte</span>
+                        <h2>Du terrain à la décision intelligente.</h2>
+                        <p>
+                            Je m’appuie sur une forte culture de la donnée, un sens aigu du terrain et une capacité à transformer des problématiques complexes en solutions concrètes, lisibles et exploitables.
+                        </p>
+                    </div>
+                    <div className="expertise-list">
+                        <div className="expertise-item">
+                            <strong>01</strong>
+                            <span>Collecte, validation et structuration des données</span>
+                        </div>
+                        <div className="expertise-item">
+                            <strong>02</strong>
+                            <span>Développement de produits web orientés performance</span>
+                        </div>
+                        <div className="expertise-item">
+                            <strong>03</strong>
+                            <span>Modélisation IA et optimisation de processus métiers</span>
+                        </div>
+                    </div>
+                </div>
+            </AnimatedSection>
 
             {/* Featured Projects Section */}
             <AnimatedSection>

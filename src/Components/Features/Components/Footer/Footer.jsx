@@ -10,8 +10,8 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-info">
-            <h3 className="footer-title">Loic T. BATO</h3>
-            <p className="footer-subtitle">Développeur · Data Analyst · CEO</p>
+            <h3 className="footer-title">Tarekpessou Loïc BATO</h3>
+            <p className="footer-subtitle">Data Analyst - Développeur Web - ML - Data Scientist</p>
           </div>
           <div className="footer-social">
             <a
@@ -42,7 +42,7 @@ const Footer = () => {
               Télécharger mon CV
             </a> */}
             <p className="footer-copyright">
-              &copy; 2025 BAT LAB. Tous droits réservés.
+              &copy; 2026 BAT LAB. Tous droits réservés.
             </p>
           </div>
         </div>

@@ -2,7 +2,7 @@
 // import React from 'react';
 import AnimatedSection from '../../Components/AnimatedSection/AnimatedSection';
 import './About.css';
-import ceo from '../../../../assets/ceo.jpg'
+import ceo from '../../../../assets/ceo2.jpg'
 
 
 const About = () => {
@@ -24,39 +24,56 @@ const About = () => {
 
                     <div className="about-text">
                         <AnimatedSection delay="200ms">
-                            <h2 className="about-heading">Un profil hybride au service de l'innovation</h2>
+                            <h2 className="about-heading">Un profil hybride au service de la donnée et de l’innovation</h2>
                             <p>
-                                Passionné par la technologie et la résolution de problèmes, j'ai construit un parcours unique à l'intersection du développement logiciel, de l'analyse de données et de l'entrepreneuriat. Mon objectif est de créer des produits qui non seulement fonctionnent parfaitement, mais qui apportent également une valeur mesurable en s'appuyant sur des données intelligentes.
+                                Data Analyst, développeur web et Data Scientist, rigoureux et méthodique, je combine une formation en mathématiques, un Master en Intelligence Artificielle & Big Data et une expérience terrain en collecte, contrôle et exploitation de données statistiques à grande échelle. Mon approche couvre l’ensemble du cycle de vie de la donnée, du recueil brut jusqu’à l’entraînement de modèles intelligents.
                             </p>
                         </AnimatedSection>
 
                         <AnimatedSection delay="300ms">
                             <h3 className="about-subheading">Mon parcours</h3>
                             <p>
-                                Après une formation en Mathématiques et Informatique Appliquée, j'ai débuté ma carrière par le développement d'applications web,
-                                en particulier sur le frontend. Cette expérience m'a donné le goût de construire des
-                                solutions concrètes et intuitives. Je me suis ensuite orienté vers l'analyse de données,
-                                où j'ai appris à traduire des ensembles complexes en stratégies exploitables. Aujourd'hui,
-                                cette double compétence "Développement et Data" est au cœur de mon approche, me permettant à la fois de concevoir des outils sur mesure et
-                                d'enrichir les décisions stratégiques par la donnée.                            </p>
-                        </AnimatedSection>
-
-                        <AnimatedSection delay="400ms">
-                            <h3 className="about-subheading">Mon rôle de CEO</h3>
-                            <p>
-                                En tant que CEO de deux entreprises, mon rôle va au-delà du code. Je suis responsable de la vision produit, de la stratégie de croissance et de la constitution d'équipes performantes. Cette expérience m'a donné une perspective complète sur le cycle de vie d'un produit, de l'idée initiale à la mise sur le marché et à sa croissance.
+                                J’ai commencé par la logique mathématique et l’informatique appliquée, puis j’ai progressivement développé une expertise forte en développement web et en analyse de données. Cette double trajectoire m’a permis d’acquérir une vision complète des enjeux techniques, métiers et décisionnels liés à la donnée. Aujourd’hui, je conçois des solutions qui associent qualité du code, fiabilité des données et performance des modèles.
                             </p>
                         </AnimatedSection>
 
-                        {/* <AnimatedSection delay="500ms" className="about-cta">
-                            <a
-                                href="/cv.pdf"
-                                download
-                                className="cv-button"
-                            >
-                                Télécharger mon CV
-                            </a>
-                        </AnimatedSection> */}
+                        <AnimatedSection delay="400ms">
+                            <h3 className="about-subheading">Mon rôle d’entrepreneur et de data builder</h3>
+                            <p>
+                                En tant que CEO de BAT LAB et de LMS Empire, je suis impliqué dans la vision produit, la stratégie de croissance et la mise en œuvre de solutions utiles sur le terrain. Cette expérience me donne une perspective globale du cycle de vie d’un produit : conception, exécution, optimisation, valeur pour les utilisateurs et impact pour les entreprises.
+                            </p>
+                        </AnimatedSection>
+
+                        <AnimatedSection delay="500ms" className="about-cta">
+                            <div className="cv-preview-panel">
+                                <div className="cv-preview-header">
+                                    <div>
+                                        <span className="cv-kicker">CV</span>
+                                        <h3>Mon curriculum vitae</h3>
+                                    </div>
+                                    <a href="/cv.html" target="_blank" rel="noopener noreferrer" className="cv-button">
+                                        Prévisualiser
+                                    </a>
+                                </div>
+                                <div className="cv-preview-mini">
+                                    <div className="mini-header">
+                                        <strong>Tarekpessou Loïc BATO</strong>
+                                        <span>Data Analyst - Développeur Web - ML - Data Scientist</span>
+                                    </div>
+                                    <div className="mini-meta">
+                                        <span>Lomé - Togo</span>
+                                        <span>+228 90 45 78 86 / 96 70 15 72</span>
+                                        <span>loicbato4@gmail.com</span>
+                                    </div>
+                                    <div className="mini-sections">
+                                        <span>Profil</span>
+                                        <span>Expériences</span>
+                                        <span>Formation</span>
+                                        <span>Compétences</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </AnimatedSection>
                     </div>
                 </div>
             </div>

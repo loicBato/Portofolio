@@ -12,7 +12,7 @@ const Companies = () => {
         <AnimatedSection>
           <h1 className="companies-title">Mes Entreprises</h1>
           <p className="companies-description">
-            En plus de mon travail technique, je dirige deux entreprises qui visent à innover dans leurs secteurs respectifs.
+            En plus de mon travail technique, j’anime des projets entrepreneuriaux qui combinent innovation, stratégie et création de valeur dans le numérique, la mode et les solutions orientées données.
           </p>
         </AnimatedSection>
 

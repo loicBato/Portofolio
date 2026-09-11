@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './Contacts.css';
 import AnimatedSection from '../../Components/AnimatedSection/AnimatedSection';
-import { LinkedInIcon, WhatsAppIcon } from '../../Icons';
+import { LinkedInIcon } from '../../Icons';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -17,14 +17,15 @@ const Contact = () => {
       return;
     }
 
-    const whatsappMessage = `Bonjour Mr BATO, je suis ${name} (${email}).\n\n${message}\n\nSource: Votre site portfolio`;
-    const phoneNumber = "22896701572"; // Replace with your number
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    const subject = encodeURIComponent(`Demande de contact de ${name}`);
+    const body = encodeURIComponent(
+      `Bonjour Mr BATO,\n\nJe suis ${name} (${email}).\n\n${message}\n\nCordialement.`
+    );
 
-    setFeedback('Redirection vers WhatsApp...');
-    window.open(whatsappURL, "_blank");
+    const mailtoLink = `mailto:loicbato4@gmail.com?subject=${subject}&body=${body}`;
+    setFeedback('Ouverture de votre client e-mail...');
+    window.location.href = mailtoLink;
 
-    // Reset form
     setName('');
     setEmail('');
     setMessage('');
@@ -37,7 +38,7 @@ const Contact = () => {
         <AnimatedSection>
           <h1 className="contact-title">Contactez-moi</h1>
           <p className="contact-description">
-            Une question, une proposition de projet ou simplement envie de discuter ? N'hésitez pas à me contacter.
+            Une idée de projet, une collaboration ou un besoin de conseil ? Je suis ouvert aux discussions autour du digital, des produits et de la donnée.
           </p>
         </AnimatedSection>
 
@@ -81,7 +82,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <button type="submit" className="form-submit">
-                Envoyer via WhatsApp
+                Envoyer par e-mail
               </button>
               {feedback && <p className="form-feedback">{feedback}</p>}
             </form>
@@ -90,29 +91,17 @@ const Contact = () => {
           <AnimatedSection delay="200ms" className="contact-methods">
             <h3 className="contact-subheading">Autres moyens de contact</h3>
             <p className="contact-text">
-              Je suis également disponible directement par e-mail ou via les réseaux sociaux professionnels.
+              Je suis également disponible par e-mail et via LinkedIn pour les opportunités professionnelles et les collaborations.
             </p>
             <div className="contact-links">
               <a
-                href="mailto:tarekpessouloicbato@gmail.com"
+                href="mailto:loicbato4@gmail.com"
                 className="contact-link"
               >
                 <span className="contact-icon">@</span>
                 <div>
                   <span className="contact-link-title">E-mail</span>
-                  <span className="contact-link-subtitle">contact@exemple.com</span>
-                </div>
-              </a>
-              <a
-                href="https://wa.me/22896701572"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-link"
-              >
-                <WhatsAppIcon className="contact-icon-svg" />
-                <div>
-                  <span className="contact-link-title">WhatsApp</span>
-                  <span className="contact-link-subtitle">Discussion directe</span>
+                  <span className="contact-link-subtitle">loicbato4@gmail.com</span>
                 </div>
               </a>
               <a
@@ -124,7 +113,7 @@ const Contact = () => {
                 <LinkedInIcon className="contact-icon-svg" />
                 <div>
                   <span className="contact-link-title">LinkedIn</span>
-                  <span className="contact-link-subtitle">Mon profil professionnel</span>
+                  <span className="contact-link-subtitle">tarekpessou-loïc-bato</span>
                 </div>
               </a>
             </div>

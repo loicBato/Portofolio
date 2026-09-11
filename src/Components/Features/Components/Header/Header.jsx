@@ -59,7 +59,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav-container">
         <NavLink to="/" className="nav-logo">
-          Mon Portofolio
+          Loïc BATO | Portfolio
         </NavLink>
 
         <div className="nav-links-desktop">

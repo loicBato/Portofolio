@@ -12,7 +12,7 @@ const Projects = () => {
         <AnimatedSection>
           <h1 className="projects-title">Mes Projets</h1>
           <p className="projects-description">
-            Une sélection de projets qui illustrent mon expertise en développement d'applications et en analyse de données. Chaque projet représente un défi unique et une solution sur mesure.
+            Une sélection de réalisations qui reflètent ma maîtrise du développement web, de la data, de l’IA et des outils de décision. Chaque projet illustre une solution pensée pour résoudre un vrai besoin métier.
           </p>
         </AnimatedSection>
 

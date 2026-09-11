@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarekpessou Loïc BATO | CV</title>
+    <style>
+      :root {
+        --bg: #f4f1eb;
+        --paper: #ffffff;
+        --text: #1f1f1f;
+        --muted: #4a4a4a;
+        --line: #cfc6b8;
+        --accent: #1d4e89;
+        --soft: #e8e2d9;
+        --chip: #f1eee9;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.5;
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 30px auto;
+        background: var(--paper);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        padding: 28px 38px 34px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+      }
+
+      .linkedin-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        color: var(--text);
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        border: 1px solid rgba(0,0,0,0.08);
+        font-size: 0.98rem;
+        font-weight: 600;
+      }
+
+      .linkedin-icon {
+        width: 18px;
+        height: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--accent);
+        color: white;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        font-size: 1.05rem;
+        color: var(--muted);
+        margin: 0;
+        padding-bottom: 6px;
+      }
+
+      .contact-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 30px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 0.94rem;
+        padding: 6px 0 10px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-item {
+        white-space: nowrap;
+      }
+
+      .section-title {
+        margin: 22px 0 12px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--line);
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .profile {
+        font-size: 1rem;
+        color: var(--text);
+        margin: 0;
+        text-align: justify;
+      }
+
+      .entry {
+        display: grid;
+        grid-template-columns: minmax(220px, 1.6fr) minmax(160px, 0.5fr);
+        gap: 18px;
+        margin-bottom: 12px;
+      }
+
+      .entry-head {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .job-title {
+        font-size: 1.06rem;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .company {
+        font-size: 0.96rem;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .date {
+        text-align: right;
+        font-size: 0.92rem;
+        color: var(--muted);
+        padding-top: 2px;
+        white-space: nowrap;
+      }
+
+      .entry-description {
+        grid-column: 1 / -1;
+        margin: 0 0 10px;
+        color: var(--text);
+      }
+
+      .education-row {
+        display: grid;
+        grid-template-columns: minmax(260px, 1.7fr) minmax(120px, 0.4fr);
+        gap: 18px;
+        margin-bottom: 10px;
+      }
+
+      .course {
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .school {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chip {
+        background: var(--chip);
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 6px;
+        padding: 7px 10px;
+        font-size: 0.84rem;
+        color: var(--text);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .misc {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      @media (max-width: 760px) {
+        .page {
+          margin: 0;
+          padding: 20px 18px 28px;
+          box-shadow: none;
+        }
+
+        .topbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .entry,
+        .education-row {
+          grid-template-columns: 1fr;
+        }
+
+        .date {
+          text-align: left;
+          padding-top: 0;
+        }
+
+        .contact-row {
+          gap: 8px 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="topbar">
+        <h1>Tarekpessou Loïc BATO</h1>
+        <div class="linkedin-badge">
+          <span class="linkedin-icon">in</span>
+          <span>Tarekpessou Loïc BATO</span>
+        </div>
+      </div>
+
+      <p class="subtitle">Data Analyst - Développeur Web - ML - Data Scientist</p>
+
+      <div class="contact-row">
+        <span class="contact-item">Lomé - Togo</span>
+        <span class="contact-item">+228 90457886 / 96701572</span>
+        <span class="contact-item">loicbato4@gmail.com</span>
+        <span class="contact-item">https://loicbato.netlify.app/</span>
+      </div>
+
+      <h2 class="section-title">Profil</h2>
+      <p class="profile">
+        Développeur d'applications web et Data Analyst passionné, motivé et dynamique, avec deux (03)
+        ans d'expérience dans le développement d'applications. Titulaire d'une licence en mathématiques,
+        j'applique des méthodes analytiques et logiques pour résoudre des problèmes complexes. Compétent
+        en développement web, ainsi qu'en analyse de données et entraînement de modèles d'intelligence
+        artificielle. Actuellement en formation en Intelligence Artificielle & Big Data, je combine
+        développement, data science et IA pour concevoir des solutions performantes et orientées données.
+      </p>
+
+      <h2 class="section-title">Expériences professionnelles</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <p class="job-title">Développeur d'application</p>
+          <p class="company">Cognitive Factory</p>
+        </div>
+        <div class="date">02/2024 - ce jours</div>
+        <p class="entry-description">
+          Développement de solutions informatiques, participation à la refonte de l'interface utilisateur,
+          améliorant l'expérience client.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <p class="job-title">Collecte des données</p>
+          <p class="company">INSEED</p>
+        </div>
+        <div class="date">10/2022 - 11/2022</div>
+        <p class="entry-description">
+          Agent de collecte des données statistiques sur la population togolaise (RGPH-5).
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <p class="job-title">Assistant suivi-évaluation</p>
+          <p class="company">Projet EAWA</p>
+        </div>
+        <div class="date">Août - Novembre 2021</div>
+        <p class="entry-description">
+          Participation aux séances de formation sur l'utilisation des plateformes de collecte, chargé de
+          collecte des données socio-démographiques du projet EAWA et de la vaccination.
+        </p>
+      </div>
+
+      <h2 class="section-title">Formations académiques</h2>
+
+      <div class="education-row">
+        <div>
+          <p class="course">Master 2 en Intelligence Artificielle &amp; Big Data</p>
+          <p class="school">ESGIS - TOGO</p>
+        </div>
+        <div class="date">2025 - à ce jour</div>
+      </div>
+
+      <div class="education-row">
+        <div>
+          <p class="course">Certificat en Sciences des données</p>
+          <p class="school">Cisco Networking Academy</p>
+        </div>
+        <div class="date">2025</div>
+      </div>
+
+      <div class="education-row">
+        <div>
+          <p class="course">Licence en Mathématiques</p>
+          <p class="school">Université de Kara</p>
+        </div>
+        <div class="date">2019 - 2023</div>
+      </div>
+
+      <h2 class="section-title">Compétences</h2>
+      <div class="skills">
+        <span class="chip">Machine Learning</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Python</span>
+        <span class="chip">DeepLearning</span>
+        <span class="chip">Développement d'application</span>
+        <span class="chip">Analyse de données</span>
+        <span class="chip">Esprit critique</span>
+        <span class="chip">Curieux</span>
+      </div>
+
+      <h2 class="section-title">Certifications</h2>
+      <ul>
+        <li>Certificat Analyse de données</li>
+        <li>Certification Introduction à la Data Science</li>
+        <li>Certificat en Intelligence Artificielle</li>
+      </ul>
+
+      <h2 class="section-title">Autres informations</h2>
+      <ul class="misc">
+        <li>Langues : Français (natif), Anglais (technique / professionnel)</li>
+        <li>Centres d’intérêt : Veille technologique en Deep Learning et Machine Learning, Voyage, Musique, Lecture, Documentaires instructifs, Sport</li>
+      </ul>
+    </div>
+  </body>
+</html>

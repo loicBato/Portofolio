@@ -31,7 +31,7 @@ const Skills = () => {
         <AnimatedSection>
           <h1 className="skills-title">Compétences & Technologies</h1>
           <p className="skills-description">
-            Ma boîte à outils pour concevoir, développer et analyser. Des frameworks frontend modernes aux pipelines de données robustes.
+            Mon expertise couvre le cycle complet de la donnée, le développement web et la modélisation IA : de la collecte et le nettoyage des données à la création de solutions utiles, robustes et orientées décision business.
           </p>
         </AnimatedSection>
 
