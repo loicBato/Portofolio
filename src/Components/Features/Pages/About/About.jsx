@@ -62,7 +62,7 @@ const About = () => {
                                 <CardContent sx={{ p: 3, pb: '20px !important' }}>
                                     <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between" spacing={2} alignItems={{ xs: 'flex-start', sm: 'center' }} sx={{ mb: 2 }}>
                                         <Box>
-                                            <Typography variant="overline" sx={{ color: '#6fc69c', fontWeight: 800, letterSpacing: '0.12em', display: 'block', fontSize: '0.72rem' }}>CV</Typography>
+                                            {/* <Typography variant="overline" sx={{ color: '#6fc69c', fontWeight: 800, letterSpacing: '0.12em', display: 'block', fontSize: '0.72rem' }}>CV</Typography> */}
                                             <Typography variant="h4" sx={{ color: '#fff', fontWeight: 700, fontSize: { xs: '1.8rem', sm: '2rem' } }}>Mon curriculum vitae</Typography>
                                         </Box>
                                         <Button
@@ -76,7 +76,7 @@ const About = () => {
                                                 color: '#fff',
                                                 fontWeight: 700,
                                                 px: 3,
-                                                py: 1.5,
+                                                py: 0.5,
                                                 borderRadius: 2,
                                                 boxShadow: '0 14px 22px rgba(0, 130, 84, 0.22)',
                                                 textTransform: 'none',

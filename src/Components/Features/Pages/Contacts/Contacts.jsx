@@ -55,7 +55,7 @@ const Contact = () => {
         </AnimatedSection>
 
         <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} className="contact-content" sx={{ mt: 5 }}>
-          <AnimatedSection delay="100ms" style={{ flex: 1 }}>
+          <AnimatedSection delay="100ms" style={{ minWidth: 0 }}>
             <Card sx={{ p: 1, background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(148,163,184,0.14)', borderRadius: 3 }}>
               <CardContent sx={{ p: 3 }}>
                 <Box component="form" onSubmit={handleSubmit} className="contact-form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -98,7 +98,7 @@ const Contact = () => {
             </Card>
           </AnimatedSection>
 
-          <AnimatedSection delay="200ms" style={{ flex: 1 }}>
+          <AnimatedSection delay="200ms" style={{ minWidth: 0 }}>
             <Card sx={{ height: '100%', background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(148,163,184,0.14)', borderRadius: 3 }}>
               <CardContent sx={{ p: 3 }}>
                 <Typography variant="h5" sx={{ color: '#fff', mb: 1.5 }}>
