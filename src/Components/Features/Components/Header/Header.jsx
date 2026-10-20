@@ -1,11 +1,9 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-// import { MenuIcon, CloseIcon } from './icons';
+import { AppBar, IconButton, Toolbar, Box } from '@mui/material';
+import { Menu as MenuIcon, Close as CloseIcon } from '@mui/icons-material';
 import './Header.css';
-import { CloseIcon, MenuIcon } from '../../Icons';
-import { IoMdMenu } from 'react-icons/io';
-import { IoCloseSharp } from 'react-icons/io5';
 
 const NavLinks = ({ onClick }) => {
   return (
@@ -52,45 +50,58 @@ const NavLinks = ({ onClick }) => {
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="header">
-      <nav className="nav-container">
+    <AppBar
+      position="sticky"
+      elevation={0}
+      className="header"
+      sx={{
+        background: 'rgba(12, 22, 38, 0.95)',
+        backdropFilter: 'blur(12px)',
+        boxShadow: 'none',
+        borderBottom: '1px solid rgba(148, 163, 184, 0.12)',
+      }}
+    >
+      <Toolbar className="nav-container" sx={{ minHeight: '72px !important', px: { xs: 2, md: 3 }, maxWidth: '100%', width: '100%' }}>
         <NavLink to="/" className="nav-logo">
           Loïc BATO | Portfolio
         </NavLink>
 
-        <div className="nav-links-desktop">
+        <Box className="nav-links-desktop" sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 1, ml: 'auto', mr: 2 }}>
           <NavLinks />
-        </div>
+        </Box>
 
-        <NavLink to="/contact" className="contact-button-desktop">
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => `nav-link contact-button-desktop ${isActive ? 'nav-link-active' : ''}`}
+        >
           Contact
         </NavLink>
 
-        <div className="nav-mobile-toggle">
-          <button onClick={toggleMenu} aria-label="Ouvrir le menu">
-            {isOpen ? <IoCloseSharp className="nav-icon" /> : <IoMdMenu className="nav-icon" />}
-          </button>
-        </div>
-      </nav>
+        <IconButton
+          className="nav-mobile-toggle"
+          aria-label="Ouvrir le menu"
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
+          onClick={toggleMenu}
+          sx={{ color: '#fff', p: 0.5, display: { xs: 'inline-flex', md: 'none' } }}
+        >
+          {isOpen ? <CloseIcon className="nav-icon" /> : <MenuIcon className="nav-icon" />}
+        </IconButton>
+      </Toolbar>
 
-      {/* Mobile Menu */}
-      <div className={`nav-mobile-menu ${isOpen ? 'nav-mobile-menu-open' : 'nav-mobile-menu-closed'}`}>
-        <div className="nav-mobile-content">
+      <Box id="mobile-navigation" className={`nav-mobile-menu ${isOpen ? 'nav-mobile-menu-open' : 'nav-mobile-menu-closed'}`}>
+        <Box className="nav-mobile-content">
           <NavLinks onClick={closeMenu} />
-          <NavLink
-            to="/contact"
-            onClick={closeMenu}
-            className="contact-button-mobile"
-          >
+          <NavLink to="/contact" onClick={closeMenu} className="contact-button-mobile">
             Contact
           </NavLink>
-        </div>
-      </div>
-    </header>
+        </Box>
+      </Box>
+    </AppBar>
   );
 };
 

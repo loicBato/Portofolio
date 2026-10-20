@@ -1,5 +1,4 @@
 
-// import React from 'react';
 import AnimatedSection from '../../Components/AnimatedSection/AnimatedSection';
 import { skillsData } from '../../Data';
 import './Skills.css';
@@ -29,7 +28,7 @@ const Skills = () => {
     <div className="skills-page">
       <div className="skills-container">
         <AnimatedSection>
-          <h1 className="skills-title">Compétences & Technologies</h1>
+          <h2 className="skills-title">Compétences & Technologies</h2>
           <p className="skills-description">
             Mon expertise couvre le cycle complet de la donnée, le développement web et la modélisation IA : de la collecte et le nettoyage des données à la création de solutions utiles, robustes et orientées décision business.
           </p>

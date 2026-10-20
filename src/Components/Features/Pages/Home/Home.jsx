@@ -2,21 +2,30 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-    SiReact,
-    SiPython,
-    SiTableau,
-    SiFastapi,
-    SiJavascript,
-    SiPytorch,
-    SiPostgresql,
-    SiNodedotjs,
-    SiGithub,
-    SiDocker,
-    SiFigma,
-    SiMongodb,
-    SiTensorflow,
-    SiScikitlearn
-} from 'react-icons/si';
+    Box,
+    Button,
+    Chip,
+    Stack,
+    Typography
+} from '@mui/material';
+import {
+    Analytics,
+    Api,
+    AutoAwesome,
+    BarChart,
+    Code,
+    DashboardCustomize,
+    DataObject,
+    GitHub,
+    Insights,
+    Memory,
+    QueryStats,
+    Science,
+    Speed,
+    Storage,
+    TableChart,
+    Terminal
+} from '@mui/icons-material';
 import './Home.css';
 import AnimatedSection from '../../Components/AnimatedSection/AnimatedSection';
 import { CeoIcon, DataIcon, DevIcon } from '../../Icons';
@@ -29,23 +38,23 @@ import ceo from '../../../../assets/ceo2.jpg'
 const Home = () => {
     const featuredProjects = projectsData.slice(0, 3);
     const techLogos = [
-        { name: 'React', Icon: SiReact },
-        { name: 'Python', Icon: SiPython },
-        { name: 'SQL', Icon: () => <span className="tech-text-icon">SQL</span> },
-        { name: 'Power BI', Icon: () => <span className="tech-text-icon tech-powerbi">PBI</span> },
-        { name: 'Tableau', Icon: SiTableau },
-        { name: 'FastAPI', Icon: SiFastapi },
-        { name: 'JavaScript', Icon: SiJavascript },
-        { name: 'PyTorch', Icon: SiPytorch },
-        { name: 'PostgreSQL', Icon: SiPostgresql },
-        { name: 'Node.js', Icon: SiNodedotjs },
-        { name: 'GitHub', Icon: SiGithub },
-        { name: 'Docker', Icon: SiDocker },
-        { name: 'Figma', Icon: SiFigma },
-        { name: 'Excel', Icon: () => <span className="tech-text-icon tech-excel">XLS</span> },
-        { name: 'MongoDB', Icon: SiMongodb },
-        { name: 'TensorFlow', Icon: SiTensorflow },
-        { name: 'Scikit-learn', Icon: SiScikitlearn }
+        { name: 'React', icon: <Code fontSize="small" />, color: '#61dafb' },
+        { name: 'Python', icon: <Science fontSize="small" />, color: '#4fc3f7' },
+        { name: 'SQL', icon: <Storage fontSize="small" />, color: '#66bb6a' },
+        { name: 'Power BI', icon: <BarChart fontSize="small" />, color: '#ffb300' },
+        { name: 'Tableau', icon: <Insights fontSize="small" />, color: '#4fc3f7' },
+        { name: 'FastAPI', icon: <Api fontSize="small" />, color: '#00c853' },
+        { name: 'JavaScript', icon: <Code fontSize="small" />, color: '#fdd835' },
+        { name: 'PyTorch', icon: <Memory fontSize="small" />, color: '#ff7043' },
+        { name: 'PostgreSQL', icon: <DataObject fontSize="small" />, color: '#5c6bc0' },
+        { name: 'Node.js', icon: <Terminal fontSize="small" />, color: '#8bc34a' },
+        { name: 'GitHub', icon: <GitHub fontSize="small" />, color: '#e0e0e0' },
+        { name: 'Docker', icon: <DashboardCustomize fontSize="small" />, color: '#42a5f5' },
+        { name: 'Figma', icon: <AutoAwesome fontSize="small" />, color: '#ff8a65' },
+        { name: 'Excel', icon: <TableChart fontSize="small" />, color: '#81c784' },
+        { name: 'MongoDB', icon: <QueryStats fontSize="small" />, color: '#4db6ac' },
+        { name: 'TensorFlow', icon: <Speed fontSize="small" />, color: '#f06292' },
+        { name: 'Scikit-learn', icon: <Analytics fontSize="small" />, color: '#7e57c2' }
     ];
     //   const topSkills = skillsData.flatMap(cat => cat.skills).slice(0, 6);
 
@@ -56,50 +65,63 @@ const Home = () => {
                 <div className="hero-container">
                     <div className="hero-content">
                         <AnimatedSection>
-                            <div className="hero-tags">
-                                <span className="hero-tag">
+                            <Stack className="hero-tags" direction="row" flexWrap="wrap" spacing={1}>
+                                <Box component="span" className="hero-tag">
                                     <DevIcon className="hero-tag-icon" />
                                     <span>DEV</span>
-                                </span>
-                                <span className="hero-tag">
+                                </Box>
+                                <Box component="span" className="hero-tag">
                                     <DataIcon className="hero-tag-icon" />
                                     <span>DATA</span>
-                                </span>
-                                <span className="hero-tag">
+                                </Box>
+                                <Box component="span" className="hero-tag">
                                     <CeoIcon className="hero-tag-icon" />
                                     <span>CEO</span>
-                                </span>
-                            </div>
-                            <h1 className="hero-title">
+                                </Box>
+                            </Stack>
+
+                            <Typography variant="h2" className="hero-title">
                                 Tarekpessou Loïc BATO
-                            </h1>
-                            <p className="hero-description">
+                            </Typography>
+                            <Typography variant="body1" className="hero-description">
                                 Data Analyst - Développeur Web - ML - Data Scientist. Je conçois des solutions techniques, analytiques et intelligentes qui transforment les données brutes en valeur exploitable pour les entreprises et les projets innovants.
-                            </p>
+                            </Typography>
 
-                            <div className="hero-metrics" aria-label="statistiques de profil">
-                                <div className="hero-metric">
-                                    <span className="hero-metric-value">+5</span>
-                                    <span className="hero-metric-label">ans de terrain</span>
-                                </div>
-                                <div className="hero-metric">
-                                    <span className="hero-metric-value">Master</span>
-                                    <span className="hero-metric-label">IA & Big Data</span>
-                                </div>
-                                <div className="hero-metric">
-                                    <span className="hero-metric-value">Full-stack</span>
-                                    <span className="hero-metric-label">+ Data</span>
-                                </div>
-                            </div>
+                            <Stack className="hero-metrics" direction="row" spacing={1.2} aria-label="statistiques de profil">
+                                <Box className="hero-metric">
+                                    <Typography className="hero-metric-value">+5</Typography>
+                                    <Typography className="hero-metric-label">ans de terrain</Typography>
+                                </Box>
+                                <Box className="hero-metric">
+                                    <Typography className="hero-metric-value">Master</Typography>
+                                    <Typography className="hero-metric-label">IA & Big Data</Typography>
+                                </Box>
+                                <Box className="hero-metric">
+                                    <Typography className="hero-metric-value">Full-stack</Typography>
+                                    <Typography className="hero-metric-label">+ Data</Typography>
+                                </Box>
+                            </Stack>
 
-                            <div className="hero-buttons">
-                                <Link to="/projects" className="hero-button-primary">
+                            <Stack className="hero-buttons" direction={{ xs: 'column', sm: 'row' }} spacing={1.5}>
+                                <Button
+                                    component={Link}
+                                    to="/projects"
+                                    variant="contained"
+                                    color="primary"
+                                    className="hero-button-primary"
+                                >
                                     Découvrir mes projets
-                                </Link>
-                                <Link to="/contact" className="hero-button-secondary">
+                                </Button>
+                                <Button
+                                    component={Link}
+                                    to="/contact"
+                                    variant="outlined"
+                                    color="primary"
+                                    className="hero-button-secondary"
+                                >
                                     Travailler avec moi
-                                </Link>
-                            </div>
+                                </Button>
+                            </Stack>
                         </AnimatedSection>
                         <AnimatedSection delay="200ms">
                             <div className="hero-image-container">
@@ -116,20 +138,36 @@ const Home = () => {
             </section>
 
             <AnimatedSection>
-                <div className="tech-carousel-wrap" aria-label="Technologies maîtrisées">
-                    <div className="tech-carousel-track">
-                        {[...techLogos, ...techLogos].map((tech, index) => {
-                            const Icon = tech.Icon;
-
-                            return (
-                                <span key={`${tech.name}-${index}`} className="tech-badge" title={tech.name}>
-                                    <Icon className="tech-badge-icon" />
-                                    <span>{tech.name}</span>
-                                </span>
-                            );
-                        })}
-                    </div>
-                </div>
+                <Box className="tech-carousel-wrap" aria-label="Technologies maîtrisées">
+                    <Stack direction="row" spacing={1} className="tech-carousel-track">
+                        {[...techLogos, ...techLogos].map((tech, index) => (
+                            <Chip
+                                key={`${tech.name}-${index}`}
+                                className="tech-badge"
+                                label={tech.name}
+                                title={tech.name}
+                                size="small"
+                                icon={
+                                    <Box component="span" sx={{ display: 'flex', alignItems: 'center', color: tech.color }}>
+                                        {tech.icon}
+                                    </Box>
+                                }
+                                sx={{
+                                    backgroundColor: 'rgba(15, 23, 42, 0.72)',
+                                    border: '1px solid rgba(0, 130, 84, 0.25)',
+                                    color: '#e6f4ed',
+                                    fontWeight: 700,
+                                    fontSize: '0.68rem',
+                                    height: '2rem',
+                                    borderRadius: '999px',
+                                    px: 0.8,
+                                    '& .MuiChip-label': { px: 0.4, fontSize: '0.68rem' },
+                                    '& .MuiChip-icon': { ml: 0.7, mr: 0.2, display: 'flex', alignItems: 'center' }
+                                }}
+                            />
+                        ))}
+                    </Stack>
+                </Box>
             </AnimatedSection>
 
             <AnimatedSection>

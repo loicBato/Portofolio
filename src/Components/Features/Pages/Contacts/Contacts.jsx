@@ -1,8 +1,18 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  IconButton,
+  Stack,
+  TextField,
+  Typography,
+} from '@mui/material';
+import { Email, LinkedIn, Send } from '@mui/icons-material';
 import './Contacts.css';
 import AnimatedSection from '../../Components/AnimatedSection/AnimatedSection';
-import { LinkedInIcon } from '../../Icons';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -33,94 +43,98 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page">
-      <div className="contact-container">
+    <Box className="contact-page" sx={{ py: { xs: 4, md: 6 }, px: 2 }}>
+      <Box className="contact-container" sx={{ maxWidth: '80rem', mx: 'auto' }}>
         <AnimatedSection>
-          <h1 className="contact-title">Contactez-moi</h1>
-          <p className="contact-description">
+          <Typography variant="h2" sx={{ color: '#fff', textAlign: 'center', mb: 2 }}>
+            Contactez-moi
+          </Typography>
+          <Typography variant="body1" sx={{ color: 'text.secondary', textAlign: 'center', maxWidth: 800, mx: 'auto', lineHeight: 1.8 }}>
             Une idée de projet, une collaboration ou un besoin de conseil ? Je suis ouvert aux discussions autour du digital, des produits et de la donnée.
-          </p>
+          </Typography>
         </AnimatedSection>
 
-        <div className="contact-content">
-          <AnimatedSection delay="100ms">
-            <form onSubmit={handleSubmit} className="contact-form">
-              <div className="form-group">
-                <label htmlFor="name" className="form-label">Nom complet</label>
-                <input
-                  type="text"
-                  id="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="form-input"
-                  placeholder="Prénom Nom"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email" className="form-label">Adresse e-mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="form-input"
-                  placeholder="vous@exemple.com"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message" className="form-label">Message</label>
-                <textarea
-                  id="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  rows={5}
-                  className="form-textarea"
-                  placeholder="Votre message..."
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" className="form-submit">
-                Envoyer par e-mail
-              </button>
-              {feedback && <p className="form-feedback">{feedback}</p>}
-            </form>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} className="contact-content" sx={{ mt: 5 }}>
+          <AnimatedSection delay="100ms" style={{ flex: 1 }}>
+            <Card sx={{ p: 1, background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(148,163,184,0.14)', borderRadius: 3 }}>
+              <CardContent sx={{ p: 3 }}>
+                <Box component="form" onSubmit={handleSubmit} className="contact-form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                  <TextField
+                    label="Nom complet"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    fullWidth
+                    placeholder="Prénom Nom"
+                    sx={{ '& .MuiOutlinedInput-root': { background: 'rgba(15,23,42,0.5)', color: '#fff' } }}
+                  />
+                  <TextField
+                    label="Adresse e-mail"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    fullWidth
+                    placeholder="vous@exemple.com"
+                    sx={{ '& .MuiOutlinedInput-root': { background: 'rgba(15,23,42,0.5)', color: '#fff' } }}
+                  />
+                  <TextField
+                    label="Message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                    fullWidth
+                    multiline
+                    minRows={5}
+                    placeholder="Votre message..."
+                    sx={{ '& .MuiOutlinedInput-root': { background: 'rgba(15,23,42,0.5)', color: '#fff' } }}
+                  />
+                  <Button type="submit" variant="contained" color="primary" endIcon={<Send />} sx={{ alignSelf: 'flex-start' }}>
+                    Envoyer par e-mail
+                  </Button>
+                  {feedback && <Typography variant="body2" sx={{ color: '#6fc69c' }}>{feedback}</Typography>}
+                </Box>
+              </CardContent>
+            </Card>
           </AnimatedSection>
 
-          <AnimatedSection delay="200ms" className="contact-methods">
-            <h3 className="contact-subheading">Autres moyens de contact</h3>
-            <p className="contact-text">
-              Je suis également disponible par e-mail et via LinkedIn pour les opportunités professionnelles et les collaborations.
-            </p>
-            <div className="contact-links">
-              <a
-                href="mailto:loicbato4@gmail.com"
-                className="contact-link"
-              >
-                <span className="contact-icon">@</span>
-                <div>
-                  <span className="contact-link-title">E-mail</span>
-                  <span className="contact-link-subtitle">loicbato4@gmail.com</span>
-                </div>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/tarekpessou-lo%C3%AFc-bato-980881229/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-link"
-              >
-                <LinkedInIcon className="contact-icon-svg" />
-                <div>
-                  <span className="contact-link-title">LinkedIn</span>
-                  <span className="contact-link-subtitle">tarekpessou-loïc-bato</span>
-                </div>
-              </a>
-            </div>
+          <AnimatedSection delay="200ms" style={{ flex: 1 }}>
+            <Card sx={{ height: '100%', background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(148,163,184,0.14)', borderRadius: 3 }}>
+              <CardContent sx={{ p: 3 }}>
+                <Typography variant="h5" sx={{ color: '#fff', mb: 1.5 }}>
+                  Autres moyens de contact
+                </Typography>
+                <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 3 }}>
+                  Je suis également disponible par e-mail et via LinkedIn pour les opportunités professionnelles et les collaborations.
+                </Typography>
+
+                <Stack spacing={2}>
+                  <Box component="a" href="mailto:loicbato4@gmail.com" sx={{ display: 'flex', alignItems: 'center', gap: 2, p: 2, borderRadius: 2, textDecoration: 'none', background: 'rgba(2, 6, 23, 0.4)', border: '1px solid rgba(148,163,184,0.12)' }}>
+                    <IconButton sx={{ bgcolor: 'rgba(0,130,84,0.1)', color: '#6fc69c' }} disableRipple>
+                      <Email />
+                    </IconButton>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#fff' }}>E-mail</Typography>
+                      <Typography variant="body2" sx={{ color: 'text.secondary' }}>loicbato4@gmail.com</Typography>
+                    </Box>
+                  </Box>
+
+                  <Box component="a" href="https://www.linkedin.com/in/tarekpessou-lo%C3%AFc-bato-980881229/" target="_blank" rel="noopener noreferrer" sx={{ display: 'flex', alignItems: 'center', gap: 2, p: 2, borderRadius: 2, textDecoration: 'none', background: 'rgba(2, 6, 23, 0.4)', border: '1px solid rgba(148,163,184,0.12)' }}>
+                    <IconButton sx={{ bgcolor: 'rgba(0,130,84,0.1)', color: '#6fc69c' }} disableRipple>
+                      <LinkedIn />
+                    </IconButton>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#fff' }}>LinkedIn</Typography>
+                      <Typography variant="body2" sx={{ color: 'text.secondary' }}>tarekpessou-loïc-bato</Typography>
+                    </Box>
+                  </Box>
+                </Stack>
+              </CardContent>
+            </Card>
           </AnimatedSection>
-        </div>
-      </div>
-    </div>
+        </Stack>
+      </Box>
+    </Box>
   );
 };
 

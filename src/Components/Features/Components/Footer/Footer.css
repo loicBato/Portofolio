@@ -56,7 +56,7 @@
 }
 
 .social-link:hover {
-  color: #00b4d8;
+  color: var(--color-primary);
 }
 
 .social-icon {
@@ -85,7 +85,7 @@
 }
 
 .cv-link:hover {
-  color: #00b4d8;
+  color: var(--color-primary);
 }
 
 .footer-copyright {

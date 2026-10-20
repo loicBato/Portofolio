@@ -1,9 +1,9 @@
 
 import { ReactIcon, NodeIcon, PythonIcon, DevIcon, DataIcon, CeoIcon } from "./Icons";
-import maintenance from '../../assets/maintenance.jpeg'
 import lms from '../../assets/lms.jpeg'
 import dashboard from '../../assets/dashboard.jpg'
-import e_commerce from '../../assets/e_commerce.jpg'
+import contenu from '../../assets/contenu.jpg'
+import deep from '../../assets/deep.jpg'
 import site from '../../assets/site.jpg'
 import fitness from '../../assets/fitness.jpg'
 import bat_lab from '../../assets/BAT.jpg'
@@ -75,31 +75,28 @@ export const companiesData = [
 
 export const projectsData = [
   {
-    slug: 'sigpmt-smartpresence',
-    title: 'SIGPMT / SmartPresence',
-    subtitle: 'Système de présence biométrique multicritère basé sur la reconnaissance faciale et la géolocalisation.',
-    category: 'IA & Biométrie',
-    tags: ['Python', 'FastAPI', 'PostgreSQL', 'FaceNet', 'CLIP'],
-    imageUrl: maintenance,
-    description: "Projet de mémoire de Master portant sur un système de présence biométrique avancé combinant reconnaissance faciale, détection de vivacité, contexte visuel et géofencing. L’objectif est d’assurer une vérification robuste et fiable de l’authenticité des présences en temps réel.",
-    context: "Les méthodes traditionnelles de présence sont parfois peu fiables ou faciles à contourner, surtout dans les environnements où la traçabilité et la sécurité des accès sont critiques.",
-    challenge: "Le défi consistait à intégrer plusieurs critères biométriques et contextuels dans un système cohérent, tout en évitant les faux positifs et en assurant un backend robuste avec gestion d’accès et flux temps réel.",
-    role: "J’ai contribué à la conception et au développement de la solution, notamment sur la partie biométrique, le backend FastAPI, la base de données PostgreSQL/pgvector, la gestion des WebSocket et les mécanismes de sécurité et d’autorisation RBAC.",
+    slug: 'analyse-sarcasme-reseaux-sociaux',
+    title: 'Analyse du sarcasme dans les commentaires des réseaux sociaux',
+    subtitle: 'Analyse de commentaires en ligne pour identifier les expressions sarcastiques.',
+    category: 'NLP & Analyse de texte',
+    tags: ['Python', 'NLP', 'Analyse de texte'],
+    imageUrl: contenu,
+    description: "Projet d’analyse de commentaires publiés sur les réseaux sociaux afin d’identifier les expressions sarcastiques à l’aide de méthodes de traitement automatique du langage.",
+    context: "Le sarcasme peut modifier le sens d’un commentaire et compliquer l’interprétation des opinions exprimées sur les réseaux sociaux.",
+    challenge: "Le projet consiste à préparer les commentaires et à analyser leurs formulations pour distinguer les expressions sarcastiques des autres commentaires.",
+    role: "J’ai travaillé sur l’analyse des données textuelles et la mise en place d’une démarche de détection du sarcasme dans les commentaires des réseaux sociaux.",
     stack: [
       { name: 'Python', icon: PythonIcon },
-      { name: 'FastAPI', icon: DevIcon },
-      { name: 'PostgreSQL', icon: DataIcon },
-      { name: 'FaceNet', icon: PythonIcon },
-      { name: 'CLIP', icon: DataIcon },
+      { name: 'NLP', icon: DataIcon },
+      { name: 'Analyse de texte', icon: DataIcon },
     ],
     screenshots: [
-      maintenance,
-      dashboard,
+      contenu,
     ],
     results: [
-      "Architecture conçue pour la robustesse et la scalabilité du système de présence.",
-      "Mise en place d’une logique multi-critère pour améliorer la fiabilité.",
-      "Approche alignée sur des usages réels de monitoring et d’authentification.",
+      "Analyse de commentaires issus des réseaux sociaux.",
+      "Étude des indices linguistiques associés au sarcasme.",
+      "Application du traitement automatique du langage à des contenus textuels.",
     ],
   },
   {
@@ -130,30 +127,28 @@ export const projectsData = [
     ],
   },
   {
-    slug: 'application-consultation-contraventions',
-    title: 'Application de consultation de contraventions',
-    subtitle: 'Plateforme React avec logique OCR et interface interactive pour la consultation rapide d’informations.',
-    category: 'Développement Web',
-    tags: ['React', 'MUI', 'Framer Motion', 'OCR'],
-    imageUrl: site,
-    description: "Développement d’une application de consultation de contraventions avec interface moderne, traitements visuels et logique d’extraction OCR pour simplifier la lecture et la gestion des documents.",
-    context: "Les utilisateurs avaient besoin d’une interface fluide pour consulter des documents administratifs et retrouver rapidement les informations utiles sans friction.",
-    challenge: "Il fallait rendre l’expérience intuitive, tout en intégrant un hook OCR personnalisé pour améliorer le traitement et la structuration des données extraites.",
-    role: "J’ai pris en charge la conception de l’interface, le développement des composants React, l’optimisation des interactions utilisateur et la logique OCR dédiée à la lecture intelligente des documents.",
+    slug: 'traduction-langue-ewe',
+    title: 'Entraînement d’un modèle de traduction en langue éwé',
+    subtitle: 'Entraînement d’un modèle de traduction à partir d’un jeu de données issu d’un concours.',
+    category: 'IA & Traduction automatique',
+    tags: ['Python', 'NLP', 'Traduction automatique'],
+    imageUrl: deep,
+    description: "Projet d’entraînement d’un modèle de traduction pour la langue éwé, en utilisant un jeu de données issu d’un concours.",
+    context: "La traduction automatique des langues moins représentées nécessite des données adaptées pour apprendre les correspondances entre les langues.",
+    challenge: "Le travail porte sur l’exploitation du jeu de données du concours et l’entraînement d’un modèle destiné à la traduction en langue éwé.",
+    role: "J’ai préparé le jeu de données issu du concours et travaillé sur l’entraînement du modèle de traduction en langue éwé.",
     stack: [
-      { name: 'React', icon: ReactIcon },
-      { name: 'MUI', icon: DevIcon },
-      { name: 'Framer Motion', icon: DevIcon },
-      { name: 'OCR', icon: DataIcon },
+      { name: 'Python', icon: PythonIcon },
+      { name: 'NLP', icon: DataIcon },
+      { name: 'Traduction automatique', icon: DataIcon },
     ],
     screenshots: [
-      site,
-      e_commerce,
+      deep,
     ],
     results: [
-      "Expérience utilisateur plus claire et plus rapide.",
-      "Traitement documentaire plus accessible et plus automatisé.",
-      "Interface moderne conçue pour améliorer l’adoption par les utilisateurs.",
+      "Exploitation d’un jeu de données issu d’un concours.",
+      "Entraînement d’un modèle dédié à la traduction en langue éwé.",
+      "Mise en application du traitement automatique du langage pour la traduction.",
     ],
   },
 ];

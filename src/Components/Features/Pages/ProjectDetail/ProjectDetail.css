@@ -23,7 +23,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #00b4d8;
+  color: var(--color-primary);
 }
 
 /* .project-title {
@@ -97,7 +97,7 @@
 .section-heading {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #00b4d8;
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
@@ -146,7 +146,7 @@
 .sidebar-icon {
   width: 1.5rem;
   height: 1.5rem;
-  color: #00b4d8;
+  color: var(--color-primary);
 }
 
 .sidebar-links {
@@ -159,7 +159,7 @@
   display: block;
   /* width: 100%; */
   text-align: center;
-  background-color: #00b4d8;
+  background-color: var(--color-primary);
   color: #ffffff;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
@@ -169,7 +169,7 @@
 }
 
 .sidebar-link-primary:hover {
-  background-color: #0096b4;
+  background-color: var(--color-primary-hover);
 }
 
 .sidebar-link-secondary {
@@ -231,7 +231,7 @@
 
 .results-checkmark {
   font-size: 1.5rem;
-  color: #00b4d8;
+  color: var(--color-primary);
   margin-right: 1rem;
 }
 

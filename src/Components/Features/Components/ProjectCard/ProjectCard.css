@@ -10,7 +10,7 @@
 }
 
 .project-card:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 180, 216, 0.2);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(var(--color-primary-rgb), 0.2);
   transform: translateY(-0.5rem);
 }
 
@@ -65,7 +65,7 @@
 
 .project-link {
   font-weight: 600;
-  color: #00b4d8;
+  color: var(--color-primary);
 }
 
 .project-card:hover .project-link {

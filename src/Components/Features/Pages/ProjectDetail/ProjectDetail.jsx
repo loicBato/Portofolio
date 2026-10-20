@@ -28,7 +28,7 @@ const ProjectDetail = () => {
         {/* Header */}
         <AnimatedSection>
           <span className="project-category">{project.category}</span>
-          <h1 className="project-title">{project.title}</h1>
+          <h2 className="project-title">{project.title}</h2>
           <p className="project-subtitle">{project.subtitle}</p>
           <div className="project-tags">
             {project.tags.map(tag => (

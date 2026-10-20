@@ -18,11 +18,12 @@
 }
 
 .nav-logo {
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 2vw, 2rem);
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-links-desktop {
@@ -31,57 +32,39 @@
   gap: 0.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .nav-links-desktop {
     display: flex;
   }
 }
 
 .nav-link {
-    font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  color: #94a3b8;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.3rem;
+  color: #dfeaf7;
   text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .nav-link:hover {
   color: #ffffff;
-  background-color: #1c2541;
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .nav-link-active {
   color: #ffffff;
-  background-color: #00b4d8;
+  background-color: var(--color-primary);
+  border-radius: 0.3rem;
 }
 
 .contact-button-desktop {
-        font-size: 0.9rem;
-
   display: none;
-  padding: 0.5rem 1.5rem;
-  background-color: #00b4d8;
-  color: #ffffff;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.contact-button-desktop:hover {
-  background-color: #0096b4;
-  transform: translateY(-0.25rem);
-}
-
-.contact-button-desktop:hover::after {
-  box-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
-}
-
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .contact-button-desktop {
-    display: inline-block;
+    display: inline-flex;
   }
 }
 
@@ -93,7 +76,7 @@
     border: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .nav-mobile-toggle {
     display: none;
   }
@@ -125,7 +108,7 @@
   max-height: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .nav-mobile-menu {
     display: none;
   }
@@ -144,7 +127,7 @@
   width: 100%;
   text-align: center;
   padding: 0.75rem 1.5rem;
-  background-color: #00b4d8;
+  background-color: var(--color-primary);
   color: #ffffff;
   font-weight: 700;
   border-radius: 0.5rem;
@@ -154,10 +137,10 @@
 }
 
 .contact-button-mobile:hover {
-  background-color: #0096b4;
+  background-color: var(--color-primary-hover);
   transform: translateY(-0.25rem);
 }
 
 .contact-button-mobile:hover::after {
-  box-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 0 8px rgba(var(--color-primary-rgb), 0.3);
 }
